@@ -45,7 +45,9 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "diff-lcs", ">= 1.4.4", "< 2.0"
 
   s.add_development_dependency "aruba",    "~> 0.14.10"
-  s.add_development_dependency 'cucumber', '~> 1.3'
+  if RUBY_VERSION >= '2.5'
+    s.add_development_dependency 'cucumber', '~> 7.0.0'
+  end
   s.add_development_dependency 'minitest', '~> 5.2'
   s.add_development_dependency 'rake',     '> 12.3.2'
 end
